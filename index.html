@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio - Fahri Dimas Saputra</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                        }
+                    },
+                    keyframes: {
+                        slideUpFade: {
+                            '0%': { opacity: '0', transform: 'translateY(40px) scale(0.95)' },
+                            '100%': { opacity: '1', transform: 'translateY(0) scale(1)' }
+                        },
+                        floatSlow: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' }
+                        }
+                    },
+                    animation: {
+                        'slide-up': 'slideUpFade 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                        'float': 'floatSlow 4s ease-in-out infinite'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .hero-glow {
+            background: radial-gradient(circle, rgba(14, 165, 233, 0.18) 0%, rgba(99, 102, 241, 0.08) 45%, rgba(255, 255, 255, 0) 75%);
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100 antialiased font-sans selection:bg-brand-500 selection:text-white overflow-x-hidden min-h-screen">
+
+    <!-- Ambient Background Lighting -->
+    <div class="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[500px] hero-glow pointer-events-none -z-10"></div>
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="#" class="font-bold text-lg tracking-tight text-white flex items-center gap-1">
+                    Portofolio Fahri Dimas<span class="text-brand-500">.</span>
+                </a>
+                
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex space-x-8 text-sm font-medium text-slate-300">
+                    <a href="#tentang" class="hover:text-brand-400 transition-colors">Tentang</a>
+                    <a href="#proyek" class="hover:text-brand-400 transition-colors">Proyek</a>
+                    <a href="#pengalaman" class="hover:text-brand-400 transition-colors">Pengalaman</a>
+                    <a href="#pendidikan" class="hover:text-brand-400 transition-colors">Pendidikan</a>
+                    <a href="#keahlian" class="hover:text-brand-400 transition-colors">Keahlian</a>
+                    <a href="#kontak" class="hover:text-brand-400 transition-colors">Kontak</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 focus:outline-none" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Nav Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-b border-slate-800 bg-slate-900 px-4 pt-2 pb-4 space-y-2 text-sm font-medium">
+            <a href="#tentang" class="block py-2 px-3 rounded-md text-slate-300 hover:bg-slate-800 hover:text-white">Tentang</a>
+            <a href="#proyek" class="block py-2 px-3 rounded-md text-slate-300 hover:bg-slate-800 hover:text-white">Proyek</a>
+            <a href="#pengalaman" class="block py-2 px-3 rounded-md text-slate-300 hover:bg-slate-800 hover:text-white">Pengalaman</a>
+            <a href="#pendidikan" class="block py-2 px-3 rounded-md text-slate-300 hover:bg-slate-800 hover:text-white">Pendidikan</a>
+            <a href="#keahlian" class="block py-2 px-3 rounded-md text-slate-300 hover:bg-slate-800 hover:text-white">Keahlian</a>
+            <a href="#kontak" class="block py-2 px-3 rounded-md text-slate-300 hover:bg-slate-800 hover:text-white">Kontak</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="tentang" class="py-12 md:py-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col-reverse md:flex-row items-center justify-between gap-8 md:gap-12">
+            <div class="flex-1 text-center md:text-left">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-400 text-xs font-semibold mb-4 backdrop-blur-sm">
+                    <span class="w-2 h-2 rounded-full bg-brand-400 animate-pulse"></span>
+                    Fresh Graduate S1 Sistem Informasi
+                </div>
+                <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">
+                    Fahri Dimas Saputra
+                </h1>
+                <p class="mt-2 text-base sm:text-lg font-medium text-brand-400">
+                    Customer Service | Staff Marketing Engineer | Administrasi Data
+                </p>
+                <p class="mt-4 text-slate-300 leading-relaxed text-sm sm:text-base max-w-2xl">
+                    Lulusan Universitas AMIKOM Yogyakarta konsentrasi Creative Multimedia. Memiliki kombinasi keahlian teknis pengolahan data, pelayanan publik, komunikasi kehumasan, serta desain UI/UX. Berkomitmen memberikan solusi yang efisien dan berorientasi pada kepuasan pelanggan/klien.
+                </p>
+                
+                <div class="mt-6 flex flex-wrap justify-center md:justify-start gap-3">
+                    <a href="https://wa.me/6285842728105" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-medium text-sm transition-all shadow-lg shadow-emerald-900/20">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        Hubungi via WhatsApp
+                    </a>
+                    <a href="mailto:dimasfahri624@gmail.com" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 font-medium text-sm transition-all shadow-lg shadow-slate-950/30">
+                        <i class="fa-regular fa-envelope"></i>
+                        Kirim Email
+                    </a>
+                </div>
+            </div>
+
+            <!-- Profile Image Container with Slide Animation -->
+            <div class="relative flex-shrink-0">
+                <div class="absolute inset-0 bg-brand-500/20 rounded-full blur-2xl scale-110"></div>
+                <div class="relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 flex items-center justify-center animate-slide-up">
+                    <img 
+                        src="assets/IMG_0396+DJ+-removebg-preview.png" 
+                        alt="Fahri Dimas Saputra" 
+                        class="w-full h-full object-contain drop-shadow-[0_20px_25px_rgba(0,0,0,0.5)] hover:scale-105 transition-transform duration-300 animate-float"
+                        onerror="this.onerror=null; this.src='https://via.placeholder.com/256x256/0f172a/0ea5e9?text=Fahri+Dimas';"
+                    >
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proyek Portofolio -->
+    <section id="proyek" class="py-12 bg-slate-950 border-y border-slate-800">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-8">
+                <h2 class="text-2xl font-bold text-white tracking-tight">Proyek & Portfolio</h2>
+                <p class="text-slate-400 text-sm mt-1">Hasil karya pengembangan web dan desain UI/UX</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Proyek 1: Web Katalog -->
+                <div class="border border-slate-800 rounded-xl p-6 bg-slate-900/60 hover:bg-slate-900 hover:border-brand-500/40 hover:shadow-xl hover:shadow-brand-500/5 transition-all flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="px-2.5 py-1 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20 text-xs font-semibold">Website Katalog</span>
+                            <i class="fa-solid fa-globe text-slate-500 group-hover:text-brand-400 transition-colors"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2 group-hover:text-brand-400 transition-colors">Katalog Hanan Jaya</h3>
+                        <p class="text-slate-400 text-sm mb-4 leading-relaxed">
+                            Pengembangan situs web katalog produk interaktif untuk Hanan Jaya yang responsif dan memudahkan pelanggan melihat produk secara efisien.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-slate-800 text-slate-300 border border-slate-700/60 px-2 py-0.5 rounded">HTML</span>
+                            <span class="text-xs bg-slate-800 text-slate-300 border border-slate-700/60 px-2 py-0.5 rounded">CSS</span>
+                            <span class="text-xs bg-slate-800 text-slate-300 border border-slate-700/60 px-2 py-0.5 rounded">GitHub Pages</span>
+                        </div>
+                        <a href="https://fahridimas1976.github.io/Katalog-Hanan-Jaya/" target="_blank" class="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-400 hover:text-brand-300">
+                            Kunjungi Website <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Proyek 2: Figma UI/UX -->
+                <div class="border border-slate-800 rounded-xl p-6 bg-slate-900/60 hover:bg-slate-900 hover:border-purple-500/40 hover:shadow-xl hover:shadow-purple-500/5 transition-all flex flex-col justify-between group">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="px-2.5 py-1 rounded bg-purple-500/10 text-purple-400 border border-purple-500/20 text-xs font-semibold">UI/UX Design</span>
+                            <i class="fa-brands fa-figma text-slate-500 group-hover:text-purple-400 transition-colors"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">Project JIDOOR Design</h3>
+                        <p class="text-slate-400 text-sm mb-4 leading-relaxed">
+                            Rancangan antarmuka aplikasi/sistem (wireframe & prototype) yang berfokus pada kenyamanan alur pengguna (*User Experience*).
+                        </p>
+                    </div>
+                    <div>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-slate-800 text-slate-300 border border-slate-700/60 px-2 py-0.5 rounded">Figma</span>
+                            <span class="text-xs bg-slate-800 text-slate-300 border border-slate-700/60 px-2 py-0.5 rounded">UI/UX</span>
+                            <span class="text-xs bg-slate-800 text-slate-300 border border-slate-700/60 px-2 py-0.5 rounded">Wireframing</span>
+                        </div>
+                        <a href="https://www.figma.com/design/7gBQ5ChiQHpFibYYo6qjSu/Project-JIDOOR?node-id=1-2&t=liZlHWviMEbIqvDV-1" target="_blank" class="inline-flex items-center gap-1.5 text-sm font-semibold text-purple-400 hover:text-purple-300">
+                            Lihat Desain Figma <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pengalaman Kerja & Organisasi -->
+    <section id="pengalaman" class="py-12 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-8">
+            <h2 class="text-2xl font-bold text-white tracking-tight">Pengalaman Kerja & Organisasi</h2>
+            <p class="text-slate-400 text-sm mt-1">Pengalaman magang profesional dan kepanitiaan</p>
+        </div>
+
+        <div class="space-y-6">
+            <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 sm:p-6 hover:border-slate-700 transition-colors">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-3">
+                    <div>
+                        <h3 class="font-bold text-white text-lg">Magang Ditbinmas Polda DIY</h3>
+                        <p class="text-brand-400 text-sm font-medium">Polda DIY, Ditbinmas</p>
+                    </div>
+                    <span class="text-xs font-medium text-slate-400 bg-slate-800 border border-slate-700 px-2.5 py-1 rounded-full w-fit">Nov - Des 2025</span>
+                </div>
+                <ul class="list-disc list-inside text-slate-300 text-sm space-y-1.5 leading-relaxed">
+                    <li>Mengelola, menginput, dan menganalisis data personel satuan pengamanan (Satpam) dari berbagai wilayah menggunakan Microsoft Excel secara akurat.</li>
+                    <li>Memastikan struktur dan pengorganisasian data tersusun rapi untuk mendukung kebutuhan informasi dan operasional di lingkungan Ditbinmas Polda DIY.</li>
+                    <li>Mendukung kegiatan administrasi dan pendataan di lingkungan Ditbinmas Polda DIY.</li>
+                </ul>
+            </div>
+
+            <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 sm:p-6 hover:border-slate-700 transition-colors">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-3">
+                    <div>
+                        <h3 class="font-bold text-white text-lg">Panitia PPM - Sie Ketertiban</h3>
+                        <p class="text-brand-400 text-sm font-medium">Universitas AMIKOM Yogyakarta</p>
+                    </div>
+                    <span class="text-xs font-medium text-slate-400 bg-slate-800 border border-slate-700 px-2.5 py-1 rounded-full w-fit">September 2024</span>
+                </div>
+                <ul class="list-disc list-inside text-slate-300 text-sm space-y-1.5 leading-relaxed">
+                    <li>Menjaga ketertiban dan kelancaran kegiatan mahasiswa baru selama rangkaian acara berlangsung.</li>
+                    <li>Membantu mengatur alur peserta saat memasuki area kampus.</li>
+                    <li>Berkoordinasi dengan panitia lain untuk mendukung kelancaran pelaksanaan acara.</li>
+                </ul>
+            </div>
+
+            <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 sm:p-6 hover:border-slate-700 transition-colors">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-3">
+                    <div>
+                        <h3 class="font-bold text-white text-lg">Panitia PPM - Sie Humas</h3>
+                        <p class="text-brand-400 text-sm font-medium">Universitas AMIKOM Yogyakarta</p>
+                    </div>
+                    <span class="text-xs font-medium text-slate-400 bg-slate-800 border border-slate-700 px-2.5 py-1 rounded-full w-fit">September 2023</span>
+                </div>
+                <ul class="list-disc list-inside text-slate-300 text-sm space-y-1.5 leading-relaxed">
+                    <li>Menjalin komunikasi dan hubungan dengan pihak kampus serta masyarakat sekitar.</li>
+                    <li>Membantu menangani surat-menyurat kepada pihak kepolisian sektor (Polsek) dan warga sekitar.</li>
+                    <li>Mendampingi narasumber dan berkoordinasi antar divisi selama kegiatan.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pendidikan -->
+    <section id="pendidikan" class="py-12 bg-slate-950 border-y border-slate-800">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-8">
+                <h2 class="text-2xl font-bold text-white tracking-tight">Pendidikan</h2>
+                <p class="text-slate-400 text-sm mt-1">Latar belakang pendidikan formal</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="border border-slate-800 rounded-xl p-5 bg-slate-900/60">
+                    <span class="text-xs font-semibold text-brand-400">S1 Sistem Informasi</span>
+                    <h3 class="font-bold text-white text-lg mt-1">Universitas AMIKOM Yogyakarta</h3>
+                    <p class="text-xs text-slate-400 mb-3">2022 - 2026 | Konsentrasi: Creative Multimedia</p>
+                    <p class="text-sm text-slate-300 font-medium mb-2">IPK: <span class="text-white font-bold">3,32</span></p>
+                    <div class="text-xs text-slate-400">
+                        <span class="font-semibold block mb-1 text-slate-300">Mata Kuliah Relevan:</span>
+                        <ul class="list-disc list-inside space-y-0.5">
+                            <li>Sistem Informasi Manajemen</li>
+                            <li>Analisis dan Perancangan Sistem Informasi</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="border border-slate-800 rounded-xl p-5 bg-slate-900/60">
+                    <span class="text-xs font-semibold text-slate-400">SMA / Sederajat</span>
+                    <h3 class="font-bold text-white text-lg mt-1">SMA Negeri 1 Ngemplak</h3>
+                    <p class="text-xs text-slate-400 mb-3">2019 - 2021</p>
+                    <p class="text-sm text-slate-300 font-medium">Jurusan Ilmu Pengetahuan Sosial (IPS)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Keahlian & Penghargaan -->
+    <section id="keahlian" class="py-12 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+                <h2 class="text-xl font-bold text-white tracking-tight mb-4">Kemampuan & Keahlian</h2>
+                <div class="space-y-4">
+                    <div class="bg-slate-900 border border-slate-800 rounded-xl p-4">
+                        <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Hard Skills</h3>
+                        <div class="flex flex-wrap gap-1.5">
+                            <span class="text-xs bg-slate-800 text-slate-200 border border-slate-700/60 px-2.5 py-1 rounded-md">Microsoft Excel (Data Entry)</span>
+                            <span class="text-xs bg-slate-800 text-slate-200 border border-slate-700/60 px-2.5 py-1 rounded-md">Microsoft Office</span>
+                            <span class="text-xs bg-slate-800 text-slate-200 border border-slate-700/60 px-2.5 py-1 rounded-md">Administrasi Data</span>
+                            <span class="text-xs bg-slate-800 text-slate-200 border border-slate-700/60 px-2.5 py-1 rounded-md">Surat-Menyurat</span>
+                            <span class="text-xs bg-slate-800 text-slate-200 border border-slate-700/60 px-2.5 py-1 rounded-md">Koordinasi Operasional</span>
+                            <span class="text-xs bg-slate-800 text-slate-200 border border-slate-700/60 px-2.5 py-1 rounded-md">UI/UX Wireframing</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-900 border border-slate-800 rounded-xl p-4">
+                        <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Soft Skills</h3>
+                        <div class="flex flex-wrap gap-1.5">
+                            <span class="text-xs bg-brand-500/10 text-brand-300 border border-brand-500/20 px-2.5 py-1 rounded-md font-medium">Communication Skills</span>
+                            <span class="text-xs bg-brand-500/10 text-brand-300 border border-brand-500/20 px-2.5 py-1 rounded-md font-medium">Customer Support</span>
+                            <span class="text-xs bg-brand-500/10 text-brand-300 border border-brand-500/20 px-2.5 py-1 rounded-md font-medium">Team Coordination</span>
+                            <span class="text-xs bg-brand-500/10 text-brand-300 border border-brand-500/20 px-2.5 py-1 rounded-md font-medium">Attention to Detail</span>
+                            <span class="text-xs bg-brand-500/10 text-brand-300 border border-brand-500/20 px-2.5 py-1 rounded-md font-medium">Problem Solving</span>
+                            <span class="text-xs bg-brand-500/10 text-brand-300 border border-brand-500/20 px-2.5 py-1 rounded-md font-medium">Adaptability</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h2 class="text-xl font-bold text-white tracking-tight mb-4">Penghargaan & Sertifikasi</h2>
+                <div class="bg-slate-900 border border-slate-800 rounded-xl p-4 space-y-3">
+                    <div class="flex items-start gap-3">
+                        <div class="p-2 bg-amber-500/10 text-amber-400 rounded-lg shrink-0 border border-amber-500/20">
+                            <i class="fa-solid fa-trophy"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-sm font-bold text-white">Peserta Lomba GEMASI 2023</h3>
+                            <p class="text-xs text-slate-400">Gelar Karya Mahasiswa Sistem Informasi - Bidang UI/UX</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-3 border-t border-slate-800 pt-3">
+                        <div class="p-2 bg-blue-500/10 text-blue-400 rounded-lg shrink-0 border border-blue-500/20">
+                            <i class="fa-solid fa-certificate"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-sm font-bold text-white">Panitia PPM AMIKOM 2023 & 2024</h3>
+                            <p class="text-xs text-slate-400">Sertifikat kontribusi Sie Humas (2023) & Sie Ketertiban (2024)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontak Footer Section -->
+    <footer id="kontak" class="py-12 bg-slate-950 border-t border-slate-800">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6 pb-8 border-b border-slate-800">
+                <div>
+                    <h2 class="text-2xl font-bold text-white">Kontak Saya</h2>
+                    <p class="text-slate-400 text-sm mt-1 max-w-md">
+                        Terbuka untuk kesempatan karir sebagai Customer Service, Staff Marketing Engineer, maupun Administrasi Data.
+                    </p>
+                </div>
+                <div class="flex flex-wrap justify-center gap-3">
+                    <a href="https://wa.me/6285842728105" target="_blank" class="px-4 py-2 bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-semibold rounded-lg transition-colors flex items-center gap-2">
+                        <i class="fa-brands fa-whatsapp"></i> 085842728105
+                    </a>
+                    <a href="mailto:dimasfahri624@gmail.com" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white text-sm font-semibold rounded-lg transition-colors flex items-center gap-2">
+                        <i class="fa-regular fa-envelope"></i> Email
+                    </a>
+                </div>
+            </div>
+
+            <div class="pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+                <p>Ngemplak, Sleman, Yogyakarta</p>
+                <p>&copy; Fahri Dimas Saputra. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script Hamburger Menu Toggle -->
+    <script>
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            } else {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-xmark');
+            }
+        });
+
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            });
+        });
+    </script>
+</body>
+</html>
